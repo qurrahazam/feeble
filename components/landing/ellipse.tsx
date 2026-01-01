@@ -1,12 +1,12 @@
 export function EllipseBg() {
   return (
-    <div className="fixed top-0 left-0 pointer-events-none z-0">
+    <div className="fixed top-0 left-0 pointer-events-none z-0 w-full h-auto">
       <svg 
-        width="500" 
-        height="334" 
+        className="w-full h-auto max-w-[300px] md:max-w-[400px] lg:max-w-[660px]"
         viewBox="0 0 500 334" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMinYMin meet"
       >
         <g filter="url(#filter0_f_1_146)">
           <ellipse 
