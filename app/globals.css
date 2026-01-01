@@ -53,6 +53,22 @@ html {
   animation: rise 1.5s ease-out forwards;
 }
 
+/* Animation for small birds - rise from lower position */
+@keyframes rise-bird {
+  0% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-rise-bird {
+  animation: rise-bird 1.5s ease-out forwards;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
