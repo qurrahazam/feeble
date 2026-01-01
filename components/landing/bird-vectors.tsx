@@ -1,5 +1,5 @@
 // Small bird SVG (no chat bubble) - for top area
-function SmallBird({ flip = false }: { flip?: boolean }) {
+function SmallBird({ flip = false, opacity_bird = '1' }: { flip?: boolean, opacity_bird?: string }) {
   return (
     <svg
       width="42"
@@ -13,6 +13,7 @@ function SmallBird({ flip = false }: { flip?: boolean }) {
       <path
         d="M0.184547 0.00157207C1.3409 0.0785971 9.20524 1.31197 13.0604 2.23725C16.9155 3.16252 20.9247 8.48212 21.85 8.71319C22.7753 8.94427 27.2466 8.4051 31.1018 8.09602C34.9569 7.78792 42.3582 12.0282 42.3582 12.0282C42.3582 13.6477 34.8789 11.18 32.2581 11.0259C29.6364 10.8719 25.5501 11.7201 24.7019 12.4133C23.8536 13.1075 22.2351 14.0328 20.8467 13.9558C19.4593 13.8788 15.5271 11.1029 15.141 10.5638C14.7549 10.0236 16.7605 9.79251 16.7605 9.79251C16.7605 9.79251 16.7605 9.79253 14.91 7.47983C13.0594 5.16713 8.97319 4.0878 6.27439 3.3936C3.57754 2.70038 -0.971803 -0.0754529 0.184547 0.00157207Z"
         fill="#00336B"
+        opacity= {opacity_bird}
       />
     </svg>
   );
@@ -57,17 +58,27 @@ export function BirdsVector() {
       </div>
 
       <div className="absolute left-[1%] sm:left-[8%] md:left-[22%] top-[200px] sm:top-[220px] md:top-[230px] lg:top-[250px] animate-rise-bird">
-        <SmallBird />
+        <SmallBird opacity_bird="0.3"/>
       </div>
 
       <div className="absolute right-[2%] sm:right-[6%] md:right-[20%] top-[100px] sm:top-[120px] md:top-[160px] lg:top-[190px] animate-rise-bird">
-        <SmallBird />
+        <SmallBird/>
       </div>
 
       <div className="absolute right-[1%] sm:right-[5%] md:right-[17%] top-[260px] sm:top-[280px] md:top-[300px] lg:top-[340px] animate-rise-bird">
-        <SmallBird />
+        <SmallBird opacity_bird="0.3" />
       </div>
 
+    {/* Still Birds */}
+    <div className="absolute left-[1%] sm:left-[8%] md:left-[22%] top-[200px] sm:top-[220px] md:top-[230px] lg:top-[250px]">
+        <SmallBird  />
+        <div className="absolute inset-x-0 bottom-[-4px] h-1 bg-black/20 rounded-full blur-sm"></div>
+      </div>
+
+      <div className="absolute right-[1%] sm:right-[5%] md:right-[17%] top-[260px] sm:top-[280px] md:top-[300px] lg:top-[340px]">
+        <SmallBird/>
+        <div className="absolute inset-x-0 bottom-[-4px] h-1 bg-black/20 rounded-full blur-sm"></div>
+      </div>
 
       <ScrollIndicator />
 
