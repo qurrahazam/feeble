@@ -4,7 +4,6 @@ import {
   BirdsVector,
   BirdsIllustration,
   EllipseBg,
-  StillBirds,
 } from '@/components/landing';
 
 export default function HomePage() {
@@ -13,7 +12,6 @@ export default function HomePage() {
       <EllipseBg />
       <HeroSection />
       <CloudLayer />
-      <StillBirds />
       <BirdsVector />
       <BirdsIllustration />
     </main>
