@@ -1,3 +1,4 @@
+"use client"
 // Small bird SVG (no chat bubble) - for top area
 function SmallBird({ flip = false, opacity_bird = '1' }: { flip?: boolean, opacity_bird?: string }) {
   return (
@@ -20,32 +21,35 @@ function SmallBird({ flip = false, opacity_bird = '1' }: { flip?: boolean, opaci
 }
 
 function ScrollIndicator() {
+  const handleScroll = () => {
+    window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' });
+  };
+
   return (
-    <div className="absolute bottom-[60px] sm:bottom-[70px] md:bottom-[80px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-50 animate-rise">
-      <span className="text-foreground text-base md:text-lg font-medium">Scroll to learn more</span>
+    <button
+      onClick={handleScroll}
+      className="absolute bottom-[100px] sm:bottom-[115px] md:bottom-[130px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-50 animate-rise cursor-pointer pointer-events-auto"
+    >
+      <span className="text-foreground text-sm md:text-base font-medium">Scroll to learn more</span>
       <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
+        width="20"
+        height="28"
+        viewBox="0 0 20 28"
         fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="text-foreground"
       >
-        <path
-          d="M13.8632 24.7812L12.8481 23.4926C11.2035 21.4048 10.3812 20.361 10.7562 19.5139C11.1313 18.6667 12.4158 18.6667 14.9848 18.6667H17.0151C19.5841 18.6667 20.8685 18.6667 21.2437 19.5139C21.6188 20.361 20.7964 21.4048 19.1517 23.4926L18.1367 24.7811C17.1464 26.0382 16.6513 26.6667 16 26.6667C15.3485 26.6667 14.8535 26.0382 13.8632 24.7812Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M16 18.6666V5.33331"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        {/* Vertical line */}
+        <path d="M10 1v16" />
+        {/* Horizontal line above arrow */}
+        <path d="M6 17h8" />
+        {/* V-shaped arrow head attached to vertical line */}
+        <path d="M4 17l6 8 6-8" />
       </svg>
-    </div>
+    </button>
   );
 }
 
