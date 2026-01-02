@@ -6,43 +6,42 @@ import { cn } from '@/lib/utils';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
+  disableHover?: boolean;
   children: React.ReactNode;
 }
 
 export function Button({
   variant = 'primary',
   size = 'md',
+  disableHover = false,
   className,
   children,
   ...props
 }: ButtonProps) {
-  return (
-   <button
-    type="button"
-    className={cn(
-      'group relative inline-flex items-center justify-center font-semibold rounded-full transition-colors duration-300',
-      {
-        'bg-primary text-white hover:text-primary': variant === 'primary',
-        'bg-secondary text-foreground': variant === 'secondary',
-        'border border-foreground text-foreground bg-transparent': variant === 'outline',
-      },
-      {
-        'px-4 py-2 text-sm': size === 'sm',
-        'px-5 py-2.5 text-base': size === 'md',
-        'px-6 py-3 text-lg': size === 'lg',
-      },
-      className
-    )}
-    {...props}
-  >
-    <span className="relative z-10">{children}</span>
-    {variant === 'primary' && (
-      <span
-        className="absolute inset-0 z-0 bg-white transform scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100"
-        style={{ borderRadius: 0 }}
-      />
-    )}
-  </button>
+  const hasHover = variant === 'primary' && !disableHover;
 
+  return (
+    <button
+      type="button"
+      className={cn(
+        'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300',
+        {
+          'bg-primary text-white': variant === 'primary' && !hasHover,
+          'bg-primary text-white hover:bg-white hover:text-primary hover:shadow-lg': hasHover,
+          'bg-secondary text-foreground': variant === 'secondary',
+          'border border-foreground text-foreground bg-transparent': variant === 'outline',
+        },
+        {
+          'px-4 py-2 text-sm': size === 'sm',
+          'px-5 py-2.5 text-base': size === 'md',
+          'px-6 py-3 text-lg': size === 'lg',
+        },
+        className
+      )}
+      style={{ outline: 'none', boxShadow: hasHover ? undefined : 'none' }}
+      {...props}
+    >
+      {children}
+    </button>
   );
 }
