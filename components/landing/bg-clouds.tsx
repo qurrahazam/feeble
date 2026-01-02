@@ -1,14 +1,27 @@
 export function CloudLayer() {
   return (
     <div
-      className="pointer-events-none absolute bottom-0 left-0 w-full h-[35vh] sm:h-[38vh] md:h-[38vh] lg:h-[40vh] overflow-hidden"
+      className="
+        pointer-events-none 
+        absolute bottom-0 left-0 w-full
+        h-[30vh] sm:h-[34vh] md:h-[36vh] lg:h-[38vh]
+        2xl:h-[49vh]
+        min-h-[220px]
+        overflow-hidden
+      "
       aria-hidden="true"
     >
       <div className="absolute bottom-0 w-full h-full animate-rise">
+
         {/* Back layer */}
         <svg
           viewBox="0 0 1920 394"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[35vh] sm:h-[38vh] md:h-[38vh] lg:h-[40vh] max-w-none z-10"
+          className="
+            absolute bottom-0 left-1/2 -translate-x-1/2
+            w-full h-[85%]
+            max-w-[2200px]
+            z-10
+          "
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -21,7 +34,12 @@ export function CloudLayer() {
         {/* Middle back layer */}
         <svg
           viewBox="0 0 1919 282"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[28vh] sm:h-[30vh] md:h-[30vh] lg:h-[32vh] max-w-none z-20"
+          className="
+            absolute bottom-0 left-1/2 -translate-x-1/2
+            w-full h-[63%]
+            max-w-[2200px]
+            z-20
+          "
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -34,7 +52,12 @@ export function CloudLayer() {
         {/* Middle front layer */}
         <svg
           viewBox="0 0 1920 175"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[20vh] sm:h-[22vh] md:h-[22vh] lg:h-[24vh] max-w-none z-30"
+          className="
+            absolute bottom-0 left-1/2 -translate-x-1/2
+            w-full h-[38%]
+            max-w-[2200px]
+            z-30
+          "
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -47,7 +70,12 @@ export function CloudLayer() {
         {/* Front layer */}
         <svg
           viewBox="0 0 1920 106"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[14vh] sm:h-[16vh] md:h-[16vh] lg:h-[18vh] max-w-none z-40"
+          className="
+            absolute bottom-0 left-1/2 -translate-x-1/2
+            w-full h-[25%]
+            max-w-[2200px]
+            z-40
+          "
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -56,6 +84,7 @@ export function CloudLayer() {
             fill="#e8f3ff"
           />
         </svg>
+
       </div>
     </div>
   );
