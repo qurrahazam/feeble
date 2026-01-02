@@ -16,12 +16,7 @@ export function CloudLayer() {
         {/* Back layer */}
         <svg
           viewBox="0 0 1920 394"
-          className="
-            absolute bottom-0 left-1/2 -translate-x-1/2
-            w-full h-[85%]
-            max-w-[2200px]
-            z-10
-          "
+          className="absolute bottom-0 left-0 w-full h-[85%] z-10"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -34,12 +29,7 @@ export function CloudLayer() {
         {/* Middle back layer */}
         <svg
           viewBox="0 0 1919 282"
-          className="
-            absolute bottom-0 left-1/2 -translate-x-1/2
-            w-full h-[63%]
-            max-w-[2200px]
-            z-20
-          "
+          className="absolute bottom-0 left-0 w-full h-[63%] z-20"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -52,12 +42,7 @@ export function CloudLayer() {
         {/* Middle front layer */}
         <svg
           viewBox="0 0 1920 175"
-          className="
-            absolute bottom-0 left-1/2 -translate-x-1/2
-            w-full h-[38%]
-            max-w-[2200px]
-            z-30
-          "
+          className="absolute bottom-0 left-0 w-full h-[38%] z-30"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
@@ -70,12 +55,7 @@ export function CloudLayer() {
         {/* Front layer */}
         <svg
           viewBox="0 0 1920 106"
-          className="
-            absolute bottom-0 left-1/2 -translate-x-1/2
-            w-full h-[25%]
-            max-w-[2200px]
-            z-40
-          "
+          className="absolute bottom-0 left-0 w-full h-[25%] z-40"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMax slice"
         >
