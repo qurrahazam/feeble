@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui';
 import { MessageBadge } from './top-highlight';
 import { AppleIcon } from '@/components/icons';
 
@@ -27,11 +26,17 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg">Get Started</Button>
+           <button
+              type="button"
+              className="relative inline-flex items-center justify-center font-semibold rounded-full px-6 py-3 text-lg text-white"
+              style={{ backgroundColor: 'var(--primary)' }}
+            >
+              Get Started
+            </button>
 
           <a
             href="#download"
-            className="flex items-center gap-2 px-5 py-2.5 border border-foreground rounded-full text-foreground text-base font-semibold hover:bg-foreground hover:text-white transition-colors"
+            className="flex items-center gap-2 px-5 py-2.5 border border-foreground rounded-full text-foreground text-base font-semibold"
             aria-label="Download Mac App"
           >
             <AppleIcon className="w-5 h-5" />
