@@ -37,9 +37,8 @@ export function Button({
     >
       <span className="relative z-10">{children}</span>
       {variant === 'primary' && (
-        <span
-          className="absolute inset-0 z-0 bg-white rounded-full transform scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100"
-          aria-hidden="true"
+      <span
+        className="absolute -inset-0.5 z-0 bg-white rounded-lg transform scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100"
         />
       )}
     </button>
